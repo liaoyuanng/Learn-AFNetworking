@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ez2-UV-xSV">
+                                <rect key="frame" x="10" y="30" width="355" height="40"/>
+                                <color key="backgroundColor" red="0.26140535666188219" green="0.75675434875779213" blue="0.97680455446243286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BGX-g1-VMC"/>
+                                </constraints>
+                                <state key="normal" title="Simple Request"/>
+                                <connections>
+                                    <action selector="simpleRequestAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voQ-rb-HwC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-Co-SJz">
+                                <rect key="frame" x="10" y="80" width="355" height="40"/>
+                                <color key="backgroundColor" red="0.26268160343170166" green="0.75677883625030518" blue="0.97665470838546753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="h50-8K-Uzq"/>
+                                </constraints>
+                                <state key="normal" title="Download(DataTask)"/>
+                                <state key="disabled" title="downloading...">
+                                    <color key="titleColor" red="0.99478024244308472" green="0.076596810019243872" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadByDataTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dkh-uM-OP7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdd-yp-TOi">
+                                <rect key="frame" x="10" y="130" width="355" height="40"/>
+                                <color key="backgroundColor" red="0.26140535669999998" green="0.75675434880000003" blue="0.97680455450000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="spD-2b-gEY"/>
+                                </constraints>
+                                <state key="normal" title="Download(DownloadTask)"/>
+                                <state key="disabled" title="downloading...">
+                                    <color key="titleColor" red="0.99478024239999996" green="0.076596810020000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadByDownloadTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f4C-in-xDQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN6-p9-dis">
+                                <rect key="frame" x="10" y="617" width="355" height="40"/>
+                                <color key="backgroundColor" red="0.26140535669999998" green="0.75675434880000003" blue="0.97680455450000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="D6x-Ng-D0P"/>
+                                </constraints>
+                                <state key="normal" title="InvalidateAndCancel"/>
+                                <connections>
+                                    <action selector="sessionCancelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lXX-tJ-dge"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ez2-UV-xSV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="5b0-tW-w0M"/>
+                            <constraint firstItem="tdd-yp-TOi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="6LK-r1-v4E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ez2-UV-xSV" secondAttribute="trailing" constant="10" id="8P0-FL-EQD"/>
+                            <constraint firstItem="Ez2-UV-xSV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9eo-58-qXK"/>
+                            <constraint firstItem="nv3-Co-SJz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Kh7-Uy-PQx"/>
+                            <constraint firstItem="nv3-Co-SJz" firstAttribute="top" secondItem="Ez2-UV-xSV" secondAttribute="bottom" constant="10" id="LZf-6E-2EP"/>
+                            <constraint firstItem="tdd-yp-TOi" firstAttribute="top" secondItem="nv3-Co-SJz" secondAttribute="bottom" constant="10" id="Pb0-vQ-kfD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nv3-Co-SJz" secondAttribute="trailing" constant="10" id="S8B-jL-GKG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cN6-p9-dis" secondAttribute="bottom" constant="10" id="m5U-Jp-rD6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cN6-p9-dis" secondAttribute="trailing" constant="10" id="nPp-Og-03a"/>
+                            <constraint firstItem="cN6-p9-dis" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="qk5-6v-OHV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tdd-yp-TOi" secondAttribute="trailing" constant="10" id="wUA-OZ-jwl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-345" y="-36"/>
+        </scene>
+    </scenes>
+</document>
