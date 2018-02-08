@@ -8,13 +8,15 @@
 
 #import "ViewController.h"
 
+#define BACKGROUND 0
+
 static NSString * const baseURL = @"http://7xsgdb.com1.z0.glb.clouddn.com";
 
 static inline NSURL *ly_urlcreate(NSString *path) {
     return [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",baseURL,path]];
 }
 
-@interface ViewController ()<NSURLSessionDelegate>
+@interface ViewController ()<NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
 
 @property (nonatomic, strong) NSURLSession *urlSession;
 
@@ -25,7 +27,12 @@ static inline NSURL *ly_urlcreate(NSString *path) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.urlSession = [NSURLSession sharedSession];
+#if BACKGROUND
+    self.urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"com.liaoyuan"] delegate:self delegateQueue:[NSOperationQueue currentQueue]];
+#else
+    self.urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue currentQueue]];
+#endif
+    
 }
 
 #pragma mark - URL Request
@@ -52,10 +59,6 @@ static inline NSURL *ly_urlcreate(NSString *path) {
     [dataTask resume];
 }
 
-- (IBAction)sessionCancelAction:(id)sender {
-    [self.urlSession invalidateAndCancel];
-}
-
 #pragma mark - download
 #pragma mark -
 
@@ -66,7 +69,7 @@ static inline NSURL *ly_urlcreate(NSString *path) {
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:ly_urlcreate(@"sxdcq.m4a")];
     request.HTTPMethod = @"POST";
-    
+
     NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:request.copy completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (!error) {
             NSError *writeError = nil;
@@ -84,7 +87,9 @@ static inline NSURL *ly_urlcreate(NSString *path) {
             btn.enabled = YES;
         });
     }];
+
     [dataTask resume];
+    
 }
 - (IBAction)downloadByDownloadTask:(id)sender {
     
@@ -93,7 +98,9 @@ static inline NSURL *ly_urlcreate(NSString *path) {
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:ly_urlcreate(@"sxdcq.m4a")];
     request.HTTPMethod = @"POST";
-
+#if BACKGROUND
+    NSURLSessionDownloadTask *downloadTask = [self.urlSession downloadTaskWithRequest:request.copy];
+#else
     NSURLSessionDownloadTask *downloadTask = [self.urlSession downloadTaskWithRequest:request.copy completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (!error) {
             NSError *moveError = nil;
@@ -112,7 +119,7 @@ static inline NSURL *ly_urlcreate(NSString *path) {
             [self showMessage:error.description];
         }
     }];
-    
+#endif
     [downloadTask resume];
 }
 
@@ -132,6 +139,28 @@ static inline NSURL *ly_urlcreate(NSString *path) {
     [upload resume];
 }
 
+#pragma mark - task operation
+#pragma mark -
+
+// cancel
+- (IBAction)sessionCancelAction:(id)sender {
+    [self.urlSession getTasksWithCompletionHandler:^(NSArray<NSURLSessionDataTask *> * _Nonnull dataTasks, NSArray<NSURLSessionUploadTask *> * _Nonnull uploadTasks, NSArray<NSURLSessionDownloadTask *> * _Nonnull downloadTasks) {
+        for (NSURLSessionDataTask *task in dataTasks) {
+            [task cancel];
+        }
+        
+        for (NSURLSessionUploadTask *uploadTask in uploadTasks) {
+            [uploadTask cancel];
+        }
+        
+        for (NSURLSessionDownloadTask *downloadTask in downloadTasks) {
+            [downloadTask cancel];
+        }
+    }];
+    
+    // [self.urlSession finishTasksAndInvalidate];
+}
+
 
 #pragma mark - NSURLSessionDelegate
 #pragma mark -
@@ -146,7 +175,20 @@ static inline NSURL *ly_urlcreate(NSString *path) {
 
 - (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session {
     NSLog(@"%@",NSStringFromSelector(_cmd));
+    [self showMessage:@"background download finish"];
 }
+
+#pragma mark - NSURLSessionDataDelegate
+#pragma mark -
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    NSLog(@"complete");
+}
+
+#pragma mark - NSURLSessionTaskDelegate
+#pragma mark -
+
+
 
 
 - (void)showMessage:(NSString *)message {

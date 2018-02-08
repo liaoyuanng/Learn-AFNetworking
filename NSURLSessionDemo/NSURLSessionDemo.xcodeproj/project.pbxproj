@@ -200,6 +200,11 @@
 					B345F1552029AE9B0005E119 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					B345F16D2029AE9C0005E119 = {
 						CreatedOnToolsVersion = 9.0;
@@ -433,6 +438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8H42Q3R4VZ;
 				INFOPLIST_FILE = NSURLSessionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liaoyuanng.NSURLSessionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8H42Q3R4VZ;
 				INFOPLIST_FILE = NSURLSessionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liaoyuanng.NSURLSessionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
