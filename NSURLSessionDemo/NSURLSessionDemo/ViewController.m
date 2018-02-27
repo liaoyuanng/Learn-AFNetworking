@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#define BACKGROUND 0
+#define BACKGROUND 1
 
 static NSString * const baseURL = @"http://7xsgdb.com1.z0.glb.clouddn.com";
 
@@ -20,6 +20,8 @@ static inline NSURL *ly_urlcreate(NSString *path) {
 
 @property (nonatomic, strong) NSURLSession *urlSession;
 
+@property (nonatomic, strong) NSMutableDictionary *tasksAndSenders;
+
 @end
 
 @implementation ViewController
@@ -27,8 +29,10 @@ static inline NSURL *ly_urlcreate(NSString *path) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tasksAndSenders = [NSMutableDictionary new];
+    
 #if BACKGROUND
-    self.urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"com.liaoyuan"] delegate:self delegateQueue:[NSOperationQueue currentQueue]];
+    self.urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"com.liaoyuan.download.background"] delegate:self delegateQueue:[NSOperationQueue currentQueue]];
 #else
     self.urlSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue currentQueue]];
 #endif
@@ -42,6 +46,9 @@ static inline NSURL *ly_urlcreate(NSString *path) {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:ly_urlcreate(@"session.json")];
     request.HTTPMethod = @"POST";
     
+#if BACKGROUND
+    NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:request];
+#else
     NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:request.copy completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (!error) {
             NSError *serializationError = nil;
@@ -55,6 +62,7 @@ static inline NSURL *ly_urlcreate(NSString *path) {
             [self showMessage:error.description];
         }
     }];
+#endif
     // 启动任务
     [dataTask resume];
 }
@@ -69,8 +77,11 @@ static inline NSURL *ly_urlcreate(NSString *path) {
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:ly_urlcreate(@"sxdcq.m4a")];
     request.HTTPMethod = @"POST";
-
-    NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:request.copy completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    
+#if BACKGROUND
+    NSURLSessionDownloadTask *dataTask = [self.urlSession downloadTaskWithRequest:request.copy];
+#else
+    __block NSURLSessionDataTask *dataTask = [self.urlSession dataTaskWithRequest:request.copy completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (!error) {
             NSError *writeError = nil;
             NSString *document = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
@@ -86,8 +97,12 @@ static inline NSURL *ly_urlcreate(NSString *path) {
         dispatch_async(dispatch_get_main_queue(), ^{
             btn.enabled = YES;
         });
+        
+        [self.tasksAndSenders removeObjectForKey:@(dataTask.taskIdentifier)];
     }];
-
+    
+#endif
+    self.tasksAndSenders[@(dataTask.taskIdentifier)] = sender;
     [dataTask resume];
     
 }
@@ -95,13 +110,12 @@ static inline NSURL *ly_urlcreate(NSString *path) {
     
     UIButton *btn = (UIButton *)sender;
     btn.enabled = NO;
-
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:ly_urlcreate(@"sxdcq.m4a")];
     request.HTTPMethod = @"POST";
 #if BACKGROUND
     NSURLSessionDownloadTask *downloadTask = [self.urlSession downloadTaskWithRequest:request.copy];
 #else
-    NSURLSessionDownloadTask *downloadTask = [self.urlSession downloadTaskWithRequest:request.copy completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    __block NSURLSessionDownloadTask *downloadTask = [self.urlSession downloadTaskWithRequest:request.copy completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (!error) {
             NSError *moveError = nil;
             NSString *document = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
@@ -118,8 +132,10 @@ static inline NSURL *ly_urlcreate(NSString *path) {
         } else {
             [self showMessage:error.description];
         }
+        [self.tasksAndSenders removeObjectForKey:@(downloadTask.taskIdentifier)];
     }];
 #endif
+    self.tasksAndSenders[@(downloadTask.taskIdentifier)] = sender;
     [downloadTask resume];
 }
 
@@ -182,14 +198,33 @@ static inline NSURL *ly_urlcreate(NSString *path) {
 #pragma mark -
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    NSLog(@"complete");
+    NSLog(@"complete， error:%@",error);
+    UIButton *sender = (UIButton *)self.tasksAndSenders[@(task.taskIdentifier)];
+    sender.enabled = YES;
 }
 
 #pragma mark - NSURLSessionTaskDelegate
 #pragma mark -
 
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler {
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
 
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask {
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
 
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeStreamTask:(NSURLSessionStreamTask *)streamTask {
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask willCacheResponse:(NSCachedURLResponse *)proposedResponse completionHandler:(void (^)(NSCachedURLResponse * _Nullable cachedResponse))completionHandler {
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
 
 - (void)showMessage:(NSString *)message {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Result" message:message preferredStyle:UIAlertControllerStyleAlert];

@@ -48,7 +48,7 @@
 }
 
 - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)(void))completionHandler {
-    NSLog(@"%@",identifier);
+    NSLog(@"background task handler --- %@",identifier);
 }
 
 
