@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87F230B14031EFC28337F97B /* libPods-AFLearnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A9E2A174202F0252A4CFF /* libPods-AFLearnTests.a */; };
+		B33AF9CB20186A530049937C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B33AF9CA20186A530049937C /* AppDelegate.m */; };
+		B33AF9CE20186A530049937C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33AF9CD20186A530049937C /* ViewController.m */; };
+		B33AF9D120186A530049937C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33AF9CF20186A530049937C /* Main.storyboard */; };
+		B33AF9D320186A530049937C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33AF9D220186A530049937C /* Assets.xcassets */; };
+		B33AF9D620186A530049937C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33AF9D420186A530049937C /* LaunchScreen.storyboard */; };
+		B33AF9D920186A530049937C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B33AF9D820186A530049937C /* main.m */; };
+		B33AF9E320186A530049937C /* AFLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B33AF9E220186A530049937C /* AFLearnTests.m */; };
+		B33AF9EE20186A530049937C /* AFLearnUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B33AF9ED20186A530049937C /* AFLearnUITests.m */; };
+		CB2CB56FD01105B114D2E2C1 /* libPods-AFLearnUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB75C47AA756D6B5D47067B /* libPods-AFLearnUITests.a */; };
+		D2C637FB935A286E54609E6B /* libPods-AFLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D9B43DD73F18F3AC7CA28 /* libPods-AFLearn.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B33AF9DF20186A530049937C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33AF9BE20186A530049937C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B33AF9C520186A530049937C;
+			remoteInfo = AFLearn;
+		};
+		B33AF9EA20186A530049937C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33AF9BE20186A530049937C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B33AF9C520186A530049937C;
+			remoteInfo = AFLearn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DB75C47AA756D6B5D47067B /* libPods-AFLearnUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFLearnUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		311E6B4CB4849FDA99B3D894 /* Pods-AFLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFLearn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFLearn/Pods-AFLearn.debug.xcconfig"; sourceTree = "<group>"; };
+		426F7D03C3FBAFDABCD4E860 /* Pods-AFLearnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFLearnTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AFLearnTests/Pods-AFLearnTests.release.xcconfig"; sourceTree = "<group>"; };
+		4C7DC8C0CD5E174601B3F52A /* Pods-AFLearnUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFLearnUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AFLearnUITests/Pods-AFLearnUITests.release.xcconfig"; sourceTree = "<group>"; };
+		59143DCF9684DAECEF4D1E70 /* Pods-AFLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFLearn.release.xcconfig"; path = "Pods/Target Support Files/Pods-AFLearn/Pods-AFLearn.release.xcconfig"; sourceTree = "<group>"; };
+		AA6120B7BF0CC0CE0D39E0C2 /* Pods-AFLearnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFLearnTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFLearnTests/Pods-AFLearnTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B31A9E2A174202F0252A4CFF /* libPods-AFLearnTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFLearnTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B33AF9C620186A530049937C /* AFLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B33AF9C920186A530049937C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B33AF9CA20186A530049937C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B33AF9CC20186A530049937C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B33AF9CD20186A530049937C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B33AF9D020186A530049937C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B33AF9D220186A530049937C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B33AF9D520186A530049937C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B33AF9D720186A530049937C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B33AF9D820186A530049937C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B33AF9DE20186A530049937C /* AFLearnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFLearnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B33AF9E220186A530049937C /* AFLearnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFLearnTests.m; sourceTree = "<group>"; };
+		B33AF9E420186A530049937C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B33AF9E920186A530049937C /* AFLearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFLearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B33AF9ED20186A530049937C /* AFLearnUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFLearnUITests.m; sourceTree = "<group>"; };
+		B33AF9EF20186A530049937C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B44D7F827AF3D28AA5D0ACF6 /* Pods-AFLearnUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFLearnUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AFLearnUITests/Pods-AFLearnUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C72D9B43DD73F18F3AC7CA28 /* libPods-AFLearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFLearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B33AF9C320186A530049937C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C637FB935A286E54609E6B /* libPods-AFLearn.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B33AF9DB20186A530049937C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F230B14031EFC28337F97B /* libPods-AFLearnTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B33AF9E620186A530049937C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB2CB56FD01105B114D2E2C1 /* libPods-AFLearnUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA4BDC0B5AE3E293AF651BA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C72D9B43DD73F18F3AC7CA28 /* libPods-AFLearn.a */,
+				B31A9E2A174202F0252A4CFF /* libPods-AFLearnTests.a */,
+				2DB75C47AA756D6B5D47067B /* libPods-AFLearnUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B33AF9BD20186A530049937C = {
+			isa = PBXGroup;
+			children = (
+				B33AF9C820186A530049937C /* AFLearn */,
+				B33AF9E120186A530049937C /* AFLearnTests */,
+				B33AF9EC20186A530049937C /* AFLearnUITests */,
+				B33AF9C720186A530049937C /* Products */,
+				E9C0991BF92BA50D22C8772E /* Pods */,
+				AA4BDC0B5AE3E293AF651BA8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B33AF9C720186A530049937C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B33AF9C620186A530049937C /* AFLearn.app */,
+				B33AF9DE20186A530049937C /* AFLearnTests.xctest */,
+				B33AF9E920186A530049937C /* AFLearnUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B33AF9C820186A530049937C /* AFLearn */ = {
+			isa = PBXGroup;
+			children = (
+				B33AF9C920186A530049937C /* AppDelegate.h */,
+				B33AF9CA20186A530049937C /* AppDelegate.m */,
+				B33AF9CC20186A530049937C /* ViewController.h */,
+				B33AF9CD20186A530049937C /* ViewController.m */,
+				B33AF9CF20186A530049937C /* Main.storyboard */,
+				B33AF9D220186A530049937C /* Assets.xcassets */,
+				B33AF9D420186A530049937C /* LaunchScreen.storyboard */,
+				B33AF9D720186A530049937C /* Info.plist */,
+				B33AF9D820186A530049937C /* main.m */,
+			);
+			path = AFLearn;
+			sourceTree = "<group>";
+		};
+		B33AF9E120186A530049937C /* AFLearnTests */ = {
+			isa = PBXGroup;
+			children = (
+				B33AF9E220186A530049937C /* AFLearnTests.m */,
+				B33AF9E420186A530049937C /* Info.plist */,
+			);
+			path = AFLearnTests;
+			sourceTree = "<group>";
+		};
+		B33AF9EC20186A530049937C /* AFLearnUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B33AF9ED20186A530049937C /* AFLearnUITests.m */,
+				B33AF9EF20186A530049937C /* Info.plist */,
+			);
+			path = AFLearnUITests;
+			sourceTree = "<group>";
+		};
+		E9C0991BF92BA50D22C8772E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				311E6B4CB4849FDA99B3D894 /* Pods-AFLearn.debug.xcconfig */,
+				59143DCF9684DAECEF4D1E70 /* Pods-AFLearn.release.xcconfig */,
+				AA6120B7BF0CC0CE0D39E0C2 /* Pods-AFLearnTests.debug.xcconfig */,
+				426F7D03C3FBAFDABCD4E860 /* Pods-AFLearnTests.release.xcconfig */,
+				B44D7F827AF3D28AA5D0ACF6 /* Pods-AFLearnUITests.debug.xcconfig */,
+				4C7DC8C0CD5E174601B3F52A /* Pods-AFLearnUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B33AF9C520186A530049937C /* AFLearn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B33AF9F220186A530049937C /* Build configuration list for PBXNativeTarget "AFLearn" */;
+			buildPhases = (
+				BA4CC95E9F4F97544452DC9E /* [CP] Check Pods Manifest.lock */,
+				B33AF9C220186A530049937C /* Sources */,
+				B33AF9C320186A530049937C /* Frameworks */,
+				B33AF9C420186A530049937C /* Resources */,
+				EBCBB0882D664A0208D4CFC3 /* [CP] Embed Pods Frameworks */,
+				DFE8665648FC77E6850BD28E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFLearn;
+			productName = AFLearn;
+			productReference = B33AF9C620186A530049937C /* AFLearn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B33AF9DD20186A530049937C /* AFLearnTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B33AF9F520186A530049937C /* Build configuration list for PBXNativeTarget "AFLearnTests" */;
+			buildPhases = (
+				141EDF8178D7A5B37E18F75F /* [CP] Check Pods Manifest.lock */,
+				B33AF9DA20186A530049937C /* Sources */,
+				B33AF9DB20186A530049937C /* Frameworks */,
+				B33AF9DC20186A530049937C /* Resources */,
+				8B31EE4D287A6663B5B808C0 /* [CP] Embed Pods Frameworks */,
+				8558D418A36936C75106BA32 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B33AF9E020186A530049937C /* PBXTargetDependency */,
+			);
+			name = AFLearnTests;
+			productName = AFLearnTests;
+			productReference = B33AF9DE20186A530049937C /* AFLearnTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B33AF9E820186A530049937C /* AFLearnUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B33AF9F820186A530049937C /* Build configuration list for PBXNativeTarget "AFLearnUITests" */;
+			buildPhases = (
+				8AB09F409F1CD049AE5D86A0 /* [CP] Check Pods Manifest.lock */,
+				B33AF9E520186A530049937C /* Sources */,
+				B33AF9E620186A530049937C /* Frameworks */,
+				B33AF9E720186A530049937C /* Resources */,
+				3F976967C67B1749602FEED0 /* [CP] Embed Pods Frameworks */,
+				9186CF921956C0EB2143B8A3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B33AF9EB20186A530049937C /* PBXTargetDependency */,
+			);
+			name = AFLearnUITests;
+			productName = AFLearnUITests;
+			productReference = B33AF9E920186A530049937C /* AFLearnUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B33AF9BE20186A530049937C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Fangzhiwei Information Technology Co., Ltd.";
+				TargetAttributes = {
+					B33AF9C520186A530049937C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					B33AF9DD20186A530049937C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B33AF9C520186A530049937C;
+					};
+					B33AF9E820186A530049937C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B33AF9C520186A530049937C;
+					};
+				};
+			};
+			buildConfigurationList = B33AF9C120186A530049937C /* Build configuration list for PBXProject "AFLearn" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B33AF9BD20186A530049937C;
+			productRefGroup = B33AF9C720186A530049937C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B33AF9C520186A530049937C /* AFLearn */,
+				B33AF9DD20186A530049937C /* AFLearnTests */,
+				B33AF9E820186A530049937C /* AFLearnUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B33AF9C420186A530049937C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B33AF9D620186A530049937C /* LaunchScreen.storyboard in Resources */,
+				B33AF9D320186A530049937C /* Assets.xcassets in Resources */,
+				B33AF9D120186A530049937C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B33AF9DC20186A530049937C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B33AF9E720186A530049937C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		141EDF8178D7A5B37E18F75F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3F976967C67B1749602FEED0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFLearnUITests/Pods-AFLearnUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8558D418A36936C75106BA32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFLearnTests/Pods-AFLearnTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AB09F409F1CD049AE5D86A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B31EE4D287A6663B5B808C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFLearnTests/Pods-AFLearnTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9186CF921956C0EB2143B8A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFLearnUITests/Pods-AFLearnUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA4CC95E9F4F97544452DC9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DFE8665648FC77E6850BD28E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFLearn/Pods-AFLearn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBCBB0882D664A0208D4CFC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFLearn/Pods-AFLearn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B33AF9C220186A530049937C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B33AF9CE20186A530049937C /* ViewController.m in Sources */,
+				B33AF9D920186A530049937C /* main.m in Sources */,
+				B33AF9CB20186A530049937C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B33AF9DA20186A530049937C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B33AF9E320186A530049937C /* AFLearnTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B33AF9E520186A530049937C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B33AF9EE20186A530049937C /* AFLearnUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B33AF9E020186A530049937C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B33AF9C520186A530049937C /* AFLearn */;
+			targetProxy = B33AF9DF20186A530049937C /* PBXContainerItemProxy */;
+		};
+		B33AF9EB20186A530049937C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B33AF9C520186A530049937C /* AFLearn */;
+			targetProxy = B33AF9EA20186A530049937C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B33AF9CF20186A530049937C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B33AF9D020186A530049937C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B33AF9D420186A530049937C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B33AF9D520186A530049937C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B33AF9F020186A530049937C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B33AF9F120186A530049937C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B33AF9F320186A530049937C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 311E6B4CB4849FDA99B3D894 /* Pods-AFLearn.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8H42Q3R4VZ;
+				INFOPLIST_FILE = AFLearn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imagex.AFLearn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B33AF9F420186A530049937C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59143DCF9684DAECEF4D1E70 /* Pods-AFLearn.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8H42Q3R4VZ;
+				INFOPLIST_FILE = AFLearn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imagex.AFLearn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B33AF9F620186A530049937C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA6120B7BF0CC0CE0D39E0C2 /* Pods-AFLearnTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8H42Q3R4VZ;
+				INFOPLIST_FILE = AFLearnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imagex.AFLearnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AFLearn.app/AFLearn";
+			};
+			name = Debug;
+		};
+		B33AF9F720186A530049937C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 426F7D03C3FBAFDABCD4E860 /* Pods-AFLearnTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8H42Q3R4VZ;
+				INFOPLIST_FILE = AFLearnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imagex.AFLearnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AFLearn.app/AFLearn";
+			};
+			name = Release;
+		};
+		B33AF9F920186A530049937C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B44D7F827AF3D28AA5D0ACF6 /* Pods-AFLearnUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8H42Q3R4VZ;
+				INFOPLIST_FILE = AFLearnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imagex.AFLearnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AFLearn;
+			};
+			name = Debug;
+		};
+		B33AF9FA20186A530049937C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C7DC8C0CD5E174601B3F52A /* Pods-AFLearnUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8H42Q3R4VZ;
+				INFOPLIST_FILE = AFLearnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imagex.AFLearnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AFLearn;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B33AF9C120186A530049937C /* Build configuration list for PBXProject "AFLearn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B33AF9F020186A530049937C /* Debug */,
+				B33AF9F120186A530049937C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B33AF9F220186A530049937C /* Build configuration list for PBXNativeTarget "AFLearn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B33AF9F320186A530049937C /* Debug */,
+				B33AF9F420186A530049937C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B33AF9F520186A530049937C /* Build configuration list for PBXNativeTarget "AFLearnTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B33AF9F620186A530049937C /* Debug */,
+				B33AF9F720186A530049937C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B33AF9F820186A530049937C /* Build configuration list for PBXNativeTarget "AFLearnUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B33AF9F920186A530049937C /* Debug */,
+				B33AF9FA20186A530049937C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B33AF9BE20186A530049937C /* Project object */;
+}
